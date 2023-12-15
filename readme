@@ -1,0 +1,20 @@
+create cicd pipeline with github
+
+1. create repo 
+2. create ec2 instance 
+3. connect remote desktop using ssh client
+   - goto terminal your remote desktop ==> goto download folder paste command ssh 
+4. goto github setting ==> action ==> runner ==> select os ==> follow the command and paste the terminal 
+5. sudo apt update 
+    curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+    sudo apt-get install nodejs
+    sudo apt-get install nginx
+    sudo npm i -g pm2
+    // runner launch comand 
+    sudo ./svc.sh install
+    // start commnad svc.sh file 
+    sudo ./svc.sh start
+6. run application 
+   pm2 start index.js
+7. edit nodejs.yml file  - -run: sudo pm2 restart index.js
+

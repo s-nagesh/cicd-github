@@ -7,7 +7,7 @@ router.post("/addproduct", async (req, res) => {
     res.send(response);
 });
 
-router.get("/productlist", verifyToken, async (req, res) => {
+router.get("/productlist", async (req, res) => {
     const response = await ProductEntity.getProduct();
     res.send(response);
 });
